@@ -133,3 +133,14 @@ not something the current deployment pretends to have.
 - The weekday morning webhook (the message text is already at `/alert.txt`, ready to POST).
 - Per-event drill-down (the attendee list behind each card) and CSV export for the sponsor-list request.
 - History: storing each nightly count would let the page show a trend line instead of a single point.
+
+## How I used AI
+
+I used AI for drafting and for arguing with my own reasoning — it helped shape the build plan and the
+written answers, and some of the sharper calls (showing "no live feed" instead of `0 / target`, reading the
+replayed R1200 IDs as a retried batch) came out of that.
+
+It was also confidently wrong: an early summary said the export had six obfuscated emails; recomputing
+from `registrations.csv` gave eight. Every number in the page, the written answers and the Loom was
+re-derived by script, and `npm test` pins them. The judgement calls — dedupe on `registration_id`, flagging
+work/personal pairs instead of merging them, splitting "closing" from "campaign" — stayed with me.
