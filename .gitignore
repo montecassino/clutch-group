@@ -1,4 +1,5 @@
-docs/
+docs/*
+!docs/answers.pdf
 PLAN.md
 
 node_modules/
