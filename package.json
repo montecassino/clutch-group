@@ -1,0 +1,14 @@
+{
+  "name": "northstar-registration-report",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node src/server.js",
+    "build": "esbuild src/worker.js --bundle --format=esm --platform=neutral --target=es2022 --loader:.csv=text --outfile=dist/worker.js",
+    "test": "node --test test/*.test.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

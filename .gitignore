@@ -1,0 +1,9 @@
+docs/
+PLAN.md
+
+node_modules/
+dist/
+.DS_Store
+.freebuff/
+.cloud-attachments/
+.commandcode/
